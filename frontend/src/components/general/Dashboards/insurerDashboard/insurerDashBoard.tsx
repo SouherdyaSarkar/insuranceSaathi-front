@@ -26,6 +26,8 @@ export const InsurerDashboard: React.FC<InsurerDashboardProps> = ({
         });
         if(response.ok){
         const data = await response.json();
+        
+        console.log(data)
         setClaimsData(data.data);
         console.log("Claims fetched");
         console.log(data.data);
