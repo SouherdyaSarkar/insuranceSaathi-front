@@ -129,7 +129,7 @@ export const InsurerDashboard: React.FC<InsurerDashboardProps> = ({
             <FileText className="h-8 w-8 text-blue-400" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-400">New Claims</p>
-              <p className="text-2xl font-bold text-blue-400">{ClaimsData.length}</p>
+              <p className="text-2xl font-bold text-blue-400">{ClaimsData?.length}</p>
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@ export const InsurerDashboard: React.FC<InsurerDashboardProps> = ({
             <Clock className="h-8 w-8 text-yellow-400" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-400">In Processing</p>
-              <p className="text-2xl font-bold text-yellow-400">{ClaimsData.filter((item) => item.claim.status === "Submitted").length}</p>
+              <p className="text-2xl font-bold text-yellow-400">{ClaimsData?.filter((item) => item.claim.status === "Submitted").length}</p>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ export const InsurerDashboard: React.FC<InsurerDashboardProps> = ({
             <CheckCircle className="h-8 w-8 text-green-400" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-400">Approved Today</p>
-              <p className="text-2xl font-bold text-green-400">{ClaimsData.filter((item)=> item.claim.status === "Accepted").length}</p>
+              <p className="text-2xl font-bold text-green-400">{ClaimsData?.filter((item)=> item.claim.status === "Accepted").length}</p>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ export const InsurerDashboard: React.FC<InsurerDashboardProps> = ({
         </div>
         <div className="p-6">
           <div className="space-y-4">
-            {ClaimsData.map((claim, index) => (
+            {ClaimsData?.map((claim, index) => (
               <div
                 key={`CLM - 00${index+1}`}
                 className="bg-white shadow-sm text-base p-4 rounded-lg border hover:border-blue-500 transition-colors cursor-pointer"
