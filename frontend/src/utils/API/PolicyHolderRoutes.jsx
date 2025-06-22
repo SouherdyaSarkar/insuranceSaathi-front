@@ -35,7 +35,7 @@ export const PolicyHolderKYCRoute = async (formdata) => {
     console.log("📤 Sending Policy Holder KYC data:", formdata);
 
     const response = await axios.patch(
-      `${base_url}/onboarding/policyHolder`,
+      `${base_url}onboarding/policyHolder`,
       formdata,
       {
         headers: {
