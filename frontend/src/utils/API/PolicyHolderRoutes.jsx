@@ -6,7 +6,7 @@ export const PolicyHolderSignUpRoute = async (formdata) => {
     console.log("📤 Sending policy holder signup data:", formdata);
 
     const response = await axios.post(
-      `${base_url}/auth/policyHolder/signUp`,
+      `${base_url}auth/policyHolder/signUp`,
       formdata,
     );
 
